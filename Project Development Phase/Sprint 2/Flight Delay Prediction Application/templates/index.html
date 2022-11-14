@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Data</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/index.css')}}">
+</head>
+<body>
+    <h1>Prediction of Flight Delay</h1>
+    <form  action="{{ url_for('predict')}}" method="post">
+      <div>
+        <label for="">Quater of the year</label>
+        <input type="number" name="quater" placeholder="ex:3" required="required" min='1' max='4' />
+        
+        <label for="">Month:</label>
+        <input type="number" name="month" placeholder="ex:12" required="required" min='1' max='12'><br>
+
+        <label for="">Day of Month:</label>
+        <input type="number" placeholder="ex:28" required="required" min='1' max='31' name="day" ><br>
+
+        <label for="">Day of Week:</label>
+        <input type="number" placeholder="ex:7" required="required" min='1' max='7' name="week"><br>
+
+        <label for="">Enter the Flight Number:</label>
+        <input type="number" placeholder="ex:2823" required="required" max="9999" name="flight number" id=""><br>
+
+        <label for="">Origin:</label>
+        <select name="origin" id="">
+            <option value='1'>ATL</option>
+            <option value='2'>DWT</option>
+            <option value='3'>JFK</option>
+            <option value='4'>MSP</option>
+            <option value='5'>SEA</option>
+          </select><br>
+        <label for="">Destination:</label>
+        <select name="destination" id="">
+          <option value='1'>ATL</option>
+          <option value='2'>DWT</option>
+          <option value='3'>JFK</option>
+          <option value='4'>MSP</option>
+          <option value='5'>SEA</option>
+        </select><br>
+
+        <label for="">Scheduled Departure Time(format hhmm):</label>
+        <input type="number"  name="Scheduled dept time" placeholder="ex:1723" required="required" max="9999"><br>
+
+        <label for=""> Scheduled Arrival Time(format hhmm):</label>
+        <input type="number"  placeholder="ex:2023" required="required" max="9999" name="Scheduled arrival time" id=""><br>
+        
+        <label for="">Actual Departure Time(in minutes):</label>
+        <input type="number" placeholder="ex:180" required="required" max="9999" name="Actual dept time" id="">
+        <br>
+        
+        <label for="">Distance(in Kms):</label> 
+        <input type="number" name="distance" placeholder="ex:2500" required="required"min='140' max="99999"/>
+        <br>
+        <button class="button">Submit</button>
+      </div>
+    </form>
+</body>
+</html>
