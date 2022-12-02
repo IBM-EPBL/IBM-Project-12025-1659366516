@@ -1,0 +1,54 @@
+html,body{
+    background-image: url("ap.png");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: left;
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+}
+h1{
+    text-align: center;
+    font-family: monospace;
+}
+
+.button {
+    background-color: yellow; /* Green */
+    /* border: none; */
+    /* color: white; */
+    /* padding: 15px 32px; */
+    text-align: center;
+    
+    /* text-decoration: none; */
+    /* display: inline-block; */
+    /* font-size: 16px; */
+  }
+
+  div {
+    color: black;
+    /* background: rgb(234, 0, 255); */
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    font-size: 14px;
+    display: grid;
+line-height: 1.4;
+/* letter-spacing: 0.149em; */
+font-weight: 800;
+font-style: italic;
+margin-left: 150px;
+margin-top: 50px;
+font-family: monospace;
+/* margin-bottom: 140px; */
+border-bottom: 9.6px;
+  }   
+
+input{
+    position: relative;
+}
